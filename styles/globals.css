@@ -1,0 +1,23 @@
+/* styles/globals.css */
+.ant-menu-horizontal {
+    border-bottom: none !important;
+}
+
+.ant-menu-horizontal>.ant-menu-item,
+.ant-menu-horizontal>.ant-menu-submenu {
+    top: 0;
+    margin: 0 10px;
+}
+
+.ant-menu-horizontal>.ant-menu-item::after,
+.ant-menu-horizontal>.ant-menu-submenu::after {
+    border-bottom: none !important;
+}
+
+@media (max-width: 768px) {
+
+    .ant-menu-horizontal>.ant-menu-item,
+    .ant-menu-horizontal>.ant-menu-submenu {
+        margin: 0 5px;
+    }
+}

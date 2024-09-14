@@ -1,21 +1,20 @@
-import Sidebar from '../components/Sidebar'
-import 'antd/dist/reset.css'  // Import Ant Design styles
-import '../styles/globals.css'  // Your global styles
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+// If you're using Ant Design styles globally
+import 'antd/dist/reset.css'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Your Name - Portfolio',
-  description: 'Your portfolio description',
+  description: 'Personal portfolio showcasing my projects and skills',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <div style={{ display: 'flex' }}>
-          <Sidebar />
-          <main style={{ flexGrow: 1, padding: '20px' }}>{children}</main>
-        </div>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
